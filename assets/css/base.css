@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --header-height: 80px;
+    --text-color: #19263e;
+    --font-main: "Helvetica Neue", sans-serif;
+}   
+body {
+    font-family: var(--font-main);
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
