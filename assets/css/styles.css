@@ -87,6 +87,72 @@
     transform: scaleX(1); /* Scale về 100% (hiển thị đầy đủ) */
 }
 
+.nav-list .nav-item:nth-child(1) {
+    position: relative;
+}
+
+/* start subnav css */
+.nav-item:nth-child(1) .subnav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 257px;
+    min-height: 200px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    background-color: var(--white-color);
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+    /* Thêm hiệu ứng chuyển động (transition) */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+}
+
+.nav-list .nav-item:nth-child(1):hover .subnav {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.subnav-item {
+    list-style-type: none;
+    width: 100%;
+    padding: 9px 39px;
+    cursor: pointer;
+}
+
+.subnav-item__link {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.subnav-item__link .item-outer::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease-out;
+}
+
+.subnav-item:hover .subnav-item__link {
+    color: var(--primary-color);
+}
+.subnav-item:hover .subnav-item__link .item-outer::after {
+    transform: scaleX(1);
+}
+
+
+
+/* start header utility */
 .header__utility {
     min-width: 106px;
     height: var(--header-height);
