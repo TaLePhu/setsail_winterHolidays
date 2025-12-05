@@ -1,13 +1,20 @@
 .main {
+    position: relative;
 }
 
 #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 0 22px;
     background-color: #fff;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
 }
 
 .header__logo {
@@ -87,17 +94,26 @@
     transform: scaleX(1); /* Scale về 100% (hiển thị đầy đủ) */
 }
 
-.nav-list .nav-item:nth-child(1) {
+/* start subnav css */
+.nav-list .nav-item:nth-child(1),
+.nav-list .nav-item:nth-child(2), 
+.nav-list .nav-item:nth-child(3), 
+.nav-list .nav-item:nth-child(4), 
+.nav-list .nav-item:nth-child(5),
+.nav-list .nav-item:nth-child(6) {
     position: relative;
 }
-
-/* start subnav css */
-.nav-item:nth-child(1) .subnav {
+.nav-item:nth-child(1) .subnav,
+.nav-item:nth-child(2) .subnav,  
+.nav-item:nth-child(3) .subnav,  
+.nav-item:nth-child(4) .subnav, 
+.nav-item:nth-child(5) .subnav,
+.nav-item:nth-child(6) .subnav {
     position: absolute;
     top: var(--header-height);
     left: 0;
-    width: 257px;
-    min-height: 200px;
+    width: var(--subnav-width);
+    min-height: 165px;
     padding-top: 28px;
     padding-bottom: 30px;
     background-color: var(--white-color);
@@ -106,9 +122,15 @@
     visibility: hidden;
     /* Thêm hiệu ứng chuyển động (transition) */
     transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.nav-list .nav-item:nth-child(1):hover .subnav {
+.nav-list .nav-item:nth-child(1):hover .subnav,
+.nav-list .nav-item:nth-child(2):hover .subnav, 
+.nav-list .nav-item:nth-child(3):hover .subnav, 
+.nav-list .nav-item:nth-child(4):hover .subnav,
+.nav-list .nav-item:nth-child(5):hover .subnav,
+.nav-list .nav-item:nth-child(6):hover .subnav {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
@@ -122,14 +144,20 @@
 }
 
 .subnav-item__link {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     font-size: 1.5rem;
+    width: 100%;
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
     transition: color .2s ease;
 }
 
+.subnav-item__link .item-outer {
+    position: relative;
+}
 .subnav-item__link .item-outer::after {
     content: "";
     position: absolute;
@@ -142,7 +170,6 @@
     transform-origin: left;
     transition: transform .2s ease-out;
 }
-
 .subnav-item:hover .subnav-item__link {
     color: var(--primary-color);
 }
@@ -150,7 +177,77 @@
     transform: scaleX(1);
 }
 
+/* start subnav item dropdown Blog */
+.subnav-item:nth-child(2), 
+.subnav-item:nth-child(3),
+.subnav-item:nth-child(4) {
+    position: relative;
+}
 
+.subnav-item__dropdown {
+    padding: 28px 0 30px 0;
+    position: absolute;
+    top: -27px;
+    right: -257px;
+    width: var(--subnav-width);
+    min-height: 165px;
+    background: var(--white-color);
+    opacity: 0;
+    visibility: hidden;
+    /* Thêm hiệu ứng chuyển động (transition) */
+    transition: opacity 0.3s ease-out,  visibility 0.3s;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.subnav .subnav-item:nth-child(2):hover .subnav-item__dropdown, 
+.subnav .subnav-item:nth-child(3):hover .subnav-item__dropdown,
+.subnav .subnav-item:nth-child(4):hover .subnav-item__dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.subnav-item__dropdown-item {
+    list-style-type: none;
+    width: 100%;
+    height: 35px;
+}
+
+.subnav-item__dropdown-link {
+    text-decoration: none;
+    padding: 9px 32px;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color .2s ease;
+}
+
+.subnav-item__dropdown-item:hover .subnav-item__dropdown-link{
+    color: var(--primary-color);
+}
+
+.subnav-item__dropdown-link .item-outer {
+    position: relative;
+}
+.subnav-item__dropdown-link .item-outer::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease-out;
+}
+.subnav-item__dropdown-item:hover .item-outer::after {
+    transform: scaleX(1);
+}
+
+
+
+/* end subnav item Blog */
 
 /* start header utility */
 .header__utility {

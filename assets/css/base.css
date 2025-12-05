@@ -5,6 +5,7 @@
 }
 :root {
     --header-height: 80px;
+    --subnav-width: 257px;
     --primary-color: #56cacf;
     --white-color: #fff;
     --text-color: #19263e;
