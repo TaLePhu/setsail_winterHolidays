@@ -117,12 +117,12 @@
     padding-top: 28px;
     padding-bottom: 30px;
     background-color: var(--white-color);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(-20px);
     visibility: hidden;
     /* Thêm hiệu ứng chuyển động (transition) */
     transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list .nav-item:nth-child(1):hover .subnav,
@@ -244,49 +244,78 @@
 .subnav-item__dropdown-item:hover .item-outer::after {
     transform: scaleX(1);
 }
-
-
-
 /* end subnav item Blog */
 
 /* start header utility */
-.header__utility {
-    min-width: 106px;
-    height: var(--header-height);
+.utility {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: var(--header-height);
+    width: 105px;
 }
 
-.utility__cart-link {
-    color: var(--text-color);
-    list-style-type: none;
-    height: 100%;
+.utility__shoping-cart {
+    position: relative;
     width: 25px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+    height: 100%;
 }
 
-.utility__cart-link i {
-    font-size: 2rem;
+.utility__shoping-cart-dropdown {
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    min-height: 74px;
+    width: 270px;
+    background: var(--white-color);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+    /* Thêm hiệu ứng chuyển động (transition) */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
 }
 
-.utility__search {
+.utility__shoping-cart:hover .utility__shoping-cart-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.utility__shoping-cart-dropdown-list {
+    margin: 25px;
+}
+
+.shoping-cart-dropdown__text {
+    font-size: 1.4rem;
+    color: var(--text-color);
 
 }
 
-.utility__search i {
-    font-size: 1.8rem;
-}
 
-.utility__bars {
-
-}
-
-.utility__bars i {
+.utility__shoping-cart-link,
+.utility__search,
+.utility__menu {
+    display: block;
+    line-height: var(--header-height);
     font-size: 1.7rem;
+    color: var(--text-color);
+    position: relative;
+    transition: color 0.2s ease;
 }
+
+.utility__shoping-cart-link:hover i,
+.utility__search:hover i,
+.utility__menu:hover i {
+    color: var(--primary-color);
+}
+
+.utility__menu {
+
+}
+
+
+
 
 
 /* Slider Css */
