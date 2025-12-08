@@ -1,47 +1,137 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const slides = document.querySelectorAll('.slider__slide');
-//     const contentInner = document.querySelector('.slider__content-inner');
-//     let currentSlideIndex = 0;
-//     const intervalTime = 2000; // 2000ms = 2 giây (yêu cầu)
+// Slider Animation Script
+(function() {
+    // Lấy các phần tử cần thiết
+    const slides = document.querySelectorAll('.slider__slide');
+    const btnLeft = document.querySelector('.slider__btn-left');
+    const btnRight = document.querySelector('.slider__btn-right');
     
-//     // Hàm hiển thị slide và kích hoạt animation text
-//     function showSlide(index) {
-//         // 1. Tắt animation text để reset trạng thái (chuẩn bị cho lần animation tiếp theo)
-//         contentInner.classList.remove('is-animating');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let autoPlayInterval;
+    let isAnimating = false;
 
-//         // 2. Ẩn tất cả slide
-//         slides.forEach((slide) => {
-//             slide.classList.remove('slider__slide--active');
-//         });
+    // Data content cho mỗi slide
+    const slideContents = [
+        {
+            title: "From Alps",
+            subtitle: "Snow Adventure",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme"
+        },
+        {
+            title: "Enjoy your",
+            subtitle: "Winter Vacations",
+            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme"
+        }
+    ];
 
-//         // 3. Kích hoạt slide mới
-//         const newSlide = slides[index];
+    // Khởi tạo: Set background-image từ data-bg-url
+    slides.forEach(slide => {
+        const bgUrl = slide.getAttribute('data-bg-url');
+        if (bgUrl) {
+            slide.style.backgroundImage = bgUrl;
+        }
+    });
+
+    // Hàm cập nhật content
+    function updateContent(slideIndex) {
+        const content = slideContents[slideIndex];
+        const contentInner = document.querySelector('.slider__content-inner');
         
-//         // Đặt ảnh nền từ data attribute (chỉ cần làm lần đầu load hoặc nếu bạn muốn đảm bảo)
-//         const bgUrl = newSlide.getAttribute('data-bg-url');
-//         newSlide.style.backgroundImage = bgUrl;
+        // Fade out content cũ
+        contentInner.classList.remove('slider__content--show');
         
-//         newSlide.classList.add('slider__slide--active');
+        // Sau khi fade out, cập nhật nội dung mới
+        setTimeout(() => {
+            document.querySelector('.slider__content-title').textContent = content.title;
+            document.querySelector('.slider__content-subtitle').textContent = content.subtitle;
+            document.querySelector('.slider__content-text').textContent = content.text;
+            
+            // Fade in content mới
+            setTimeout(() => {
+                contentInner.classList.add('slider__content--show');
+            }, 50);
+        }, 400);
+    }
+
+    // Hàm chuyển slide
+    function goToSlide(slideIndex) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        // Reset tất cả slides
+        slides.forEach((slide, index) => {
+            slide.classList.remove('slider__slide--active', 'slider__slide--zoom');
+            
+            if (index === slideIndex) {
+                // Slide mới: hiện lên và zoom
+                slide.classList.add('slider__slide--active');
+                // Delay nhỏ để trigger animation
+                setTimeout(() => {
+                    slide.classList.add('slider__slide--zoom');
+                }, 50);
+            }
+        });
+
+        // Cập nhật content
+        updateContent(slideIndex);
+
+        currentSlide = slideIndex;
+
+        // Cho phép animation tiếp theo sau 1s
+        setTimeout(() => {
+            isAnimating = false;
+        }, 3000);
+    }
+
+    // Hàm next slide
+    function nextSlide() {
+        const next = (currentSlide + 1) % totalSlides;
+        goToSlide(next);
+    }
+
+    // Hàm previous slide
+    function prevSlide() {
+        const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+        goToSlide(prev);
+    }
+
+    // Auto play
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Event listeners cho buttons
+    btnLeft.addEventListener('click', () => {
+        stopAutoPlay();
+        prevSlide();
+        startAutoPlay();
+    });
+
+    btnRight.addEventListener('click', () => {
+        stopAutoPlay();
+        nextSlide();
+        startAutoPlay();
+    });
+
+    // Khởi động slider
+    function initSlider() {
+        // Hiển thị slide đầu tiên
+        slides[currentSlide].classList.add('slider__slide--zoom');
+        contentInner.classList.add('slider__content--show');
         
-//         // 4. Kích hoạt lại animation text
-//         // Cần một độ trễ nhỏ (khoảng 50ms) để trình duyệt nhận ra sự thay đổi lớp CSS (reset animation)
-//         setTimeout(() => {
-//             contentInner.classList.add('is-animating');
-//         }, 50); 
-//     }
+        // Bắt đầu auto play
+        startAutoPlay();
+    }
 
-//     // Hàm chuyển slide tiếp theo
-//     function nextSlide() {
-//         // Tính toán index của slide tiếp theo (quay lại 0 nếu đã hết)
-//         currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-//         showSlide(currentSlideIndex);
-//     }
+    // Dừng auto play khi hover vào slider
+    const slider = document.getElementById('slider');
+    slider.addEventListener('mouseenter', stopAutoPlay);
+    slider.addEventListener('mouseleave', startAutoPlay);
 
-//     // --- Khởi tạo ---
-
-//     // 1. Đảm bảo slide đầu tiên được hiển thị và text được animate khi trang load
-//     showSlide(currentSlideIndex);
-
-//     // 2. Thiết lập tự động chuyển slide sau mỗi 2 giây
-//     setInterval(nextSlide, intervalTime);
-// });
+    // Khởi chạy
+    initSlider();
+})();

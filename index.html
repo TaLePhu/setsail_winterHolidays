@@ -323,21 +323,32 @@
         
         <!-- Slider -->
         <div id="slider">
+
+            <button class="slider__nav slider__btn-left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider__nav slider__btn-right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Content động - sẽ thay đổi theo từng slide -->
             <div class="slider__content">
                 <div class="slider__content-inner">
-                    <h2 class="slider__content-title">Enjoy your</h2>
-                    <h3 class="slider__content-subtitle">Winter Vacations</h3>
-                    <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodos ligula.</p>
+                    <h2 class="slider__content-title">From Alps</h2>
+                    <h3 class="slider__content-subtitle">Snow Adventure</h3>
+                    <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme</p>
                 </div>
             </div>
+
             <!-- slider background img -->
             <div class="slider__slides-container">
+                <div class="slider__slide slider__slide--active" 
+                    data-bg-url="url('./assets/img/slider/slider1_snowAdventure.jpg')">
+                </div>
+
                 <div class="slider__slide" 
-             data-bg-url="url('./assets/img/slider/slider1_snowAdventure.jpg')"></div>
-            </div>
-            <div class="slider__slides-container">
-                <div class="slider__slideslider__slide--active" 
-             data-bg-url="url('./assets/img/slider/slider2_winterLocations.jpg')"></div>
+                    data-bg-url="url('./assets/img/slider/slider2_winterLocations.jpg')">
+                </div>
             </div>
         </div>
         <!-- Content -->
