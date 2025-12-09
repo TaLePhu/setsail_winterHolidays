@@ -20,3 +20,25 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/* grid library */
+.grid {
+    width: 100%;
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.col-five {
+    width: 20%;
+}

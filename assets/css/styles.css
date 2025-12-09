@@ -447,11 +447,102 @@
     }
 }
 
-
+/* start content */
 #content {
+    height: 600px;
+    background-color: #fff;
+}
+
+.tour-section {
+    margin-top: 20px;
 
 }
 
+.tour-list {
+
+}
+
+.tour-item {
+    min-width: 288px;
+    
+}
+
+.tour-item__img-link {
+
+}
+
+.tour-item__img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.tour-item__meta {
+    width: 100%;
+    height: 40px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.tour-item__meta-info,
+.tour-item__meta-link {
+    font-size: 1.4rem;
+    padding: 8px 10px 8px 26px;
+    color: var(--white-color);
+
+}
+
+.tour-item__meta-link {
+    text-decoration: none;
+}
+.tour-item__outer {
+    position: relative;
+}
+.tour-item__outer::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--white-color);
+    /* animation */
+    transform: scaleX(0);   
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.tour-item__meta-link:hover .tour-item__outer::after {
+    transform: scaleX(1);
+}
+
+.tour-item__inner {
+
+}
+
+.tour-item__title {
+
+}
+
+.tour-item__description {
+
+}
+
+.tour-item__footer {
+
+}
+
+.tour-item__price {
+
+}
+
+.tour-item__rating {
+
+}
+
+
+/* end content */
 #footer {
 
 }
