@@ -464,18 +464,27 @@
 
 .tour-item {
     min-width: 288px;
-    
 }
 
 .tour-item__img-link {
-
+    display: block;
+    overflow: hidden;
 }
 
 .tour-item__img {
     width: 100%;
     height: 170px;
     object-fit: cover;
+    display: block;
+    /* add animation */
+    transform: scale(1);
+    transition: transform 2s ease-in-out;
 }
+
+.tour-item__img-link:hover .tour-item__img {
+    transform: scale(1.1);
+}
+
 
 .tour-item__meta {
     width: 100%;
@@ -518,26 +527,55 @@
 }
 
 .tour-item__inner {
-
+    padding: 32px 25px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .tour-item__title {
+    margin-bottom: 10px;
+}
 
+.tour-item__title-link {
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color .2s ease;
+
+}
+
+
+.tour-item__title-link:hover {
+    color: var(--primary-color)
 }
 
 .tour-item__description {
-
+    font-size: 1.4rem;
+    line-height: 1.6;
 }
 
 .tour-item__footer {
+    margin-top: 10px;
+}
 
+.tour-item__price,
+.tour-item__rating,
+.tour__item-review {
+    margin-right: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .tour-item__price {
-
 }
 
 .tour-item__rating {
+
+}
+
+.tour__item-review {
 
 }
 
