@@ -449,17 +449,38 @@
 
 /* start content */
 #content {
-    height: 600px;
     background-color: #fff;
+    padding-bottom: 50px; /* Thêm padding dưới cho phần phân trang */
 }
 
 .tour-section {
     margin-top: 20px;
+    position: relative;
+}
 
+/* Container bọc tour-list, kiểm soát việc hiển thị chỉ 4 item */
+.tour-list-wrapper {
+    /* overflow: hidden;  */
+    /* Ẩn phần tử nằm ngoài */
+    /* Giả định bạn muốn hiển thị 4 item/slide như ảnh */
+    /* width: calc(4 * (288px + khoảng cách giữa các item));  */
+    width: 100%;
+    /* Hoặc đặt width bằng width của grid container */
 }
 
 .tour-list {
+    display: flex; /* Đặt các item cạnh nhau */
+    flex-wrap: nowrap; /* Không xuống dòng */
+    /* width: max-content;  */
+    /* Chiều rộng bằng tổng chiều rộng của tất cả item */
+    transition: transform 0.5s ease-in-out; /* Thêm transition cho chuyển động trượt */
+    /* 2. Dùng cho hiệu ứng kéo chuột */
+    cursor: grab;
+    user-select: none; /* Ngăn chặn chọn văn bản khi kéo */
+}
 
+.tour-list.is-dragging {
+    cursor: grabbing;
 }
 
 .tour-item {
@@ -568,17 +589,121 @@
     font-weight: 600;
 }
 
-.tour-item__price {
+/* Thêm style cho phần pagination */
+.tour-pagination {
+    text-align: center;
+    padding: 20px 0;
 }
 
-.tour-item__rating {
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color, #007bff); /* Thay bằng màu xanh của bạn */
+}
+
+/* start cta feature */
+.cta-feature {
+    height: auto;
+    width: 100%;
+}
+
+.cta-feature__header {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-feature__label {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-color);
+}
+
+.cta-feature__title {
+    font-size: 6.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.cta-feature__wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 856px;
+    height: 412px;
+    
+}
+
+.cta-feature__img-backgroud {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-feature__link-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-feature__footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 856px;
+    height: 412px;
+}
+
+.cta-feature__footer-text {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.cta-feature__footer-link {
+    font-size: 1.3rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 22px 0;
+    max-width: 218px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
 
 }
 
-.tour__item-review {
-
+.cta-feature__footer-link:hover {
+    opacity: 0.8;
 }
 
+
+/* end cta feature */
 
 /* end content */
 #footer {
