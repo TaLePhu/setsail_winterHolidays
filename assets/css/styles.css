@@ -701,9 +701,70 @@
 .cta-feature__footer-link:hover {
     opacity: 0.8;
 }
-
-
 /* end cta feature */
+
+/* start review-section */
+.review {
+    min-height: 600px;
+    background-image: url(../img/tour-review/backgroud1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Tạo hiệu ứng parallax nhẹ */
+}
+
+.review__wrap {
+}
+
+.review__heading {
+
+}
+
+.review__title {
+
+}
+
+.review__subtitle {
+
+}
+
+.review__list {
+
+}
+
+.review__item {
+
+}
+
+.review__item-img-wrap {
+
+}
+
+.review__item-avatar {
+
+}
+
+.review__item-content {
+
+}
+
+.review__item-title {
+
+}
+
+.review__item-star {
+
+}
+
+.review__item-text {
+
+}
+
+.review__item-name {
+
+}
+
+
+/* end review-section */
 
 /* end content */
 #footer {
