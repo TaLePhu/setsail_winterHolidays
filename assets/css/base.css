@@ -42,3 +42,31 @@ html {
 .col-five {
     width: 20%;
 }
+
+.col-third {
+    width: 33.3333%;
+}
+
+.dots__pagination {
+    text-align: center;
+    margin-top: 42px;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #a4e6f1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot:hover {
+    background-color: var(--primary-color);
+}
+
+.dot.active {
+    background-color: var(--primary-color, #43cdd7); /* Thay bằng màu xanh của bạn */
+}

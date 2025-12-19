@@ -589,26 +589,6 @@
     font-weight: 600;
 }
 
-/* Thêm style cho phần pagination */
-.tour-pagination {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.dot {
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dot.active {
-    background-color: var(--primary-color, #007bff); /* Thay bằng màu xanh của bạn */
-}
 
 /* start cta feature */
 .cta-feature {
@@ -705,34 +685,65 @@
 
 /* start review-section */
 .review {
+    position: relative;
     min-height: 600px;
+    width: 100%;
     background-image: url(../img/tour-review/backgroud1.jpg);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* Tạo hiệu ứng parallax nhẹ */
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lớp phủ mờ để nổi bật nội dung */
+.review__overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .review__wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
 }
 
 .review__heading {
-
 }
 
 .review__title {
+    font-size: 6.5rem;
+    color: var(--white-color);
+    line-height: 1.4;
 
 }
 
 .review__subtitle {
-
-}
+    font-size: 1.7rem;
+    color: var(--white-color);
+    line-height: 1.4;
+    width: 635px;
+    margin-left: auto;
+    margin-right: auto;
+}  
 
 .review__list {
-
+    user-select: none;
 }
 
 .review__item {
+    
+}
 
+.review__item-wrap {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 44px;
 }
 
 .review__item-img-wrap {
@@ -740,27 +751,43 @@
 }
 
 .review__item-avatar {
-
+    width: 107px;
+    height: 107px;
 }
 
 .review__item-content {
-
+    text-align: left;
+    margin-left: 30px;
 }
 
 .review__item-title {
-
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+.review__item-title:hover {
+    color: var(--primary-color);
 }
 
 .review__item-star {
-
+    font-size: 1.1rem;
+    color: var(--primary-color);
 }
 
 .review__item-text {
-
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin: 15px 0;
+    line-height: 1.6;
 }
 
 .review__item-name {
-
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 15px;
 }
 
 
