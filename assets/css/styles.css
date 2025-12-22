@@ -711,9 +711,6 @@
     text-align: center;
 }
 
-.review__heading {
-}
-
 .review__title {
     font-size: 6.5rem;
     color: var(--white-color);
@@ -728,14 +725,11 @@
     width: 635px;
     margin-left: auto;
     margin-right: auto;
-}  
+    margin-bottom: 38px;
+}
 
 .review__list {
     user-select: none;
-}
-
-.review__item {
-    
 }
 
 .review__item-wrap {
@@ -744,10 +738,6 @@
     display: flex;
     justify-content: space-evenly;
     padding: 40px 44px;
-}
-
-.review__item-img-wrap {
-
 }
 
 .review__item-avatar {
@@ -789,11 +779,128 @@
     font-weight: 600;
     margin-top: 15px;
 }
-
-
 /* end review-section */
 
-/* end content */
+/* start holiday hightlights */
+.holidays {
+
+}
+
+.content__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 145px 0 68px;
+} 
+
+.content__heading-tagline {
+    font-size: 3.3rem;
+    font-family: Satisfy, cursive;
+    line-height: 1.4;
+    color: var(--primary-color);
+}
+
+.content__heading-title {
+    font-size: 6.5rem;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+.content__heading-text {
+    font-size: 1.7rem;
+    margin-top: 15px;
+    color: #505050;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.holidays__list {
+    margin-bottom: 164px;
+}
+
+.holidays__item {
+    text-align: center;
+}
+
+.holidays__item-wrap {
+
+}
+
+.holidays__item-img {
+    transition: transform .4s ease-in-out;
+    will-change: transform;
+}
+
+.holidays__item-img:hover {
+    transform: translateY(-10px);
+    filter: brightness(1.1); /* Làm ảnh sáng lên một chút */
+}
+
+.holiday__item-content {
+    padding-top: 27px;
+}
+
+.holidays__item-title {
+    font-size: 1.8rem;
+    color: #212121;
+}
+
+.holidays__item-text {
+    margin-top: 11px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #505050;
+}
+
+/* end holiday hightlights */
+
+/* start content team */
+.team {
+
+} 
+
+.team-list {
+
+}
+
+.team-item {
+
+}
+
+.team-item__wraper {
+    position: relative;
+}
+
+.team-item__image {
+    display: inline-block;
+    max-width: 380px;
+    max-height: 538px;
+}
+
+.team-item__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.team-item__name {
+
+}
+
+.team-item__text {
+
+}
+
+.team__item-socials {
+
+}
+
+/* end content team */
+
+
 #footer {
 
 }
