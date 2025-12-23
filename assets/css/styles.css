@@ -24,7 +24,7 @@
 
 /* Navigation css */
 .nav {
-    width: 892px;
+    max-width: 892px;
     height: var(--header-height);
 }
 
@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 120px;
+    max-width: 120px;
 }
 
 .nav-item__link {
@@ -313,7 +313,7 @@
 #slider {
     margin-top: var(--header-height);
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 420px;
     overflow: hidden; /* Quan trọng: ẩn phần zoom ra ngoài */
 }
@@ -869,12 +869,13 @@
 
 .team-item__wraper {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .team-item__image {
-    display: inline-block;
-    max-width: 380px;
-    max-height: 538px;
+    display: block;
+    width: 100%;
 }
 
 .team-item__content {
@@ -884,18 +885,47 @@
     right: 0;
     background: var(--primary-color);
     color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    /* animation, default hide content */
+    transform: translateY(100%);
+    transition: transform .4s ease-out;
+}
+.team-item__wraper:hover .team-item__content {
+    transform: translateY(0);
 }
 
 .team-item__name {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
 
 }
 
 .team-item__text {
-
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .team__item-socials {
+}
 
+.team__item-socials-link {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.team__item-socials-link:hover i {
+    opacity: 0.7;
+}
+
+.team__item-socials-link i {
+    margin: 0 8px;
 }
 
 /* end content team */

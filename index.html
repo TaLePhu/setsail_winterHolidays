@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-7.1.0-web/css/all.min.css">
 </head>
 <body>
-    <div class="main">
+    <div class="main grid">
         <header id="header">
             <div class="header__logo">
                 <a href="#logo" class="header__logo-link">
@@ -356,188 +357,85 @@
         <div id="content">
             <div class="tour-section grid">
                 <!-- 1. add .tour-list-wraper -->
-                 <div class="tour-list-wrapper">
+                 <div class="tour-list-wrapper grid">
                      <div class="tour-list row">
-                         <div class="tour-item col col-five">
-                             <a class="tour-item__img-link" href="#">
-                                 <img src="./assets/img/tour/tour1_ActiveWinter.jpg" 
-                                 alt="active Winter" 
-                                 class="tour-item__img"
-                                 >
-                             </a>
-                             <div class="tour-item__meta">
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-regular fa-calendar"></i>
-                                     1
-                                 </span>
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-solid fa-user"></i>
-                                     13+
-                                 </span>
-                                 <a class="tour-item__meta-link" href="#">
-                                     <i class="fa-solid fa-location-dot"></i>
-                                     <span class="tour-item__outer">Skiing</span>
-                                 </a>
-                             </div>
+                         <div class="tour-item col l-2-4 m-4 c-12">
                              <div class="tour-item__inner">
-                                 <h4 class="tour-item__title">
-                                     <a class="tour-item__title-link" href="#">Active Winter</a>
-                                 </h4>
-                                 <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
-                                 <div class="tour-item__footer">
-                                     <span class="tour-item__price">$3600</span>
-                                     <span class="tour-item__rating">
-                                         <i class="fa-solid fa-star"></i>
-                                         $3600
-                                     </span>
-                                     <span class="tour__item-review">good</span>
-                                 </div>
+                                <a class="tour-item__img-link" href="#">
+                                    <img src="./assets/img/tour/tour1_ActiveWinter.jpg" 
+                                    alt="active Winter" 
+                                    class="tour-item__img"
+                                    >
+                                </a>
+                                <div class="tour-item__meta">
+                                    <span class="tour-item__meta-info">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        1
+                                    </span>
+                                    <span class="tour-item__meta-info">
+                                        <i class="fa-solid fa-user"></i>
+                                        13+
+                                    </span>
+                                    <a class="tour-item__meta-link" href="#">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span class="tour-item__outer">Skiing</span>
+                                    </a>
+                                </div>
+                                <div class="tour-item__inner">
+                                    <h4 class="tour-item__title">
+                                        <a class="tour-item__title-link" href="#">Active Winter</a>
+                                    </h4>
+                                    <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
+                                    <div class="tour-item__footer">
+                                        <span class="tour-item__price">$3600</span>
+                                        <span class="tour-item__rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            $3600
+                                        </span>
+                                        <span class="tour__item-review">good</span>
+                                    </div>
+                                </div>
                              </div>
                          </div>
-                         <div class="tour-item col col-five">
-                             <a class="tour-item__img-link" href="#">
-                                 <img src="./assets/img/tour/tour2_WinterAction.jpg" 
-                                 alt="Winter Action" 
-                                 class="tour-item__img"
-                                 >
-                             </a>
-                             <div class="tour-item__meta">
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-regular fa-calendar"></i>
-                                     1
-                                 </span>
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-solid fa-user"></i>
-                                     13+
-                                 </span>
-                                 <a class="tour-item__meta-link" href="#">
-                                     <i class="fa-solid fa-location-dot"></i>
-                                     <span class="tour-item__outer">Skiing</span>
-                                 </a>
-                             </div>
+                         <div class="tour-item col l-2-4 m-4 c-12">
                              <div class="tour-item__inner">
-                                 <h4 class="tour-item__title">
-                                     <a class="tour-item__title-link" href="#">Winter Action</a>
-                                 </h4>
-                                 <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
-                                 <div class="tour-item__footer">
-                                     <span class="tour-item__price">$3600</span>
-                                     <span class="tour-item__rating">
-                                         <i class="fa-solid fa-star"></i>
-                                         $3600
-                                     </span>
-                                     <span class="tour__item-review">good</span>
-                                 </div>
+                                <a class="tour-item__img-link" href="#">
+                                    <img src="./assets/img/tour/tour1_ActiveWinter.jpg" 
+                                    alt="active Winter" 
+                                    class="tour-item__img"
+                                    >
+                                </a>
+                                <div class="tour-item__meta">
+                                    <span class="tour-item__meta-info">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        1
+                                    </span>
+                                    <span class="tour-item__meta-info">
+                                        <i class="fa-solid fa-user"></i>
+                                        13+
+                                    </span>
+                                    <a class="tour-item__meta-link" href="#">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span class="tour-item__outer">Skiing</span>
+                                    </a>
+                                </div>
+                                <div class="tour-item__inner">
+                                    <h4 class="tour-item__title">
+                                        <a class="tour-item__title-link" href="#">Active Winter</a>
+                                    </h4>
+                                    <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
+                                    <div class="tour-item__footer">
+                                        <span class="tour-item__price">$3600</span>
+                                        <span class="tour-item__rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            $3600
+                                        </span>
+                                        <span class="tour__item-review">good</span>
+                                    </div>
+                                </div>
                              </div>
                          </div>
-                         <div class="tour-item col col-five">
-                             <a class="tour-item__img-link" href="#">
-                                 <img src="./assets/img/tour/tour3_MagicOfItaly.jpg" 
-                                 alt="Magic Of Italy" 
-                                 class="tour-item__img"
-                                 >
-                             </a>
-                             <div class="tour-item__meta">
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-regular fa-calendar"></i>
-                                     1
-                                 </span>
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-solid fa-user"></i>
-                                     13+
-                                 </span>
-                                 <a class="tour-item__meta-link" href="#">
-                                     <i class="fa-solid fa-location-dot"></i>
-                                     <span class="tour-item__outer">Skiing</span>
-                                 </a>
-                             </div>
-                             <div class="tour-item__inner">
-                                 <h4 class="tour-item__title">
-                                     <a class="tour-item__title-link" href="#">Magic Of Italy</a>
-                                 </h4>
-                                 <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
-                                 <div class="tour-item__footer">
-                                     <span class="tour-item__price">$3600</span>
-                                     <span class="tour-item__rating">
-                                         <i class="fa-solid fa-star"></i>
-                                         $3600
-                                     </span>
-                                     <span class="tour__item-review">good</span>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="tour-item col col-five">
-                             <a class="tour-item__img-link" href="#">
-                                 <img src="./assets/img/tour/tour4_SkiingInAlps.jpg" 
-                                 alt="Skiing In Alps" 
-                                 class="tour-item__img"
-                                 >
-                             </a>
-                             <div class="tour-item__meta">
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-regular fa-calendar"></i>
-                                     1
-                                 </span>
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-solid fa-user"></i>
-                                     13+
-                                 </span>
-                                 <a class="tour-item__meta-link" href="#">
-                                     <i class="fa-solid fa-location-dot"></i>
-                                     <span class="tour-item__outer">Skiing</span>
-                                 </a>
-                             </div>
-                             <div class="tour-item__inner">
-                                 <h4 class="tour-item__title">
-                                     <a class="tour-item__title-link" href="#">Skiing In Alps</a>
-                                 </h4>
-                                 <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
-                                 <div class="tour-item__footer">
-                                     <span class="tour-item__price">$3600</span>
-                                     <span class="tour-item__rating">
-                                         <i class="fa-solid fa-star"></i>
-                                         $3600
-                                     </span>
-                                     <span class="tour__item-review">good</span>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="tour-item col col-five">
-                             <a class="tour-item__img-link" href="#">
-                                 <img src="./assets/img/tour/tour5_SnowSurfing.jpg" 
-                                 alt="Snow Surfing" 
-                                 class="tour-item__img"
-                                 >
-                             </a>
-                             <div class="tour-item__meta">
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-regular fa-calendar"></i>
-                                     1
-                                 </span>
-                                 <span class="tour-item__meta-info">
-                                     <i class="fa-solid fa-user"></i>
-                                     13+
-                                 </span>
-                                 <a class="tour-item__meta-link" href="#">
-                                     <i class="fa-solid fa-location-dot"></i>
-                                     <span class="tour-item__outer">Skiing</span>
-                                 </a>
-                             </div>
-                             <div class="tour-item__inner">
-                                 <h4 class="tour-item__title">
-                                     <a class="tour-item__title-link" href="#">Snow Surfing</a>
-                                 </h4>
-                                 <p class="tour-item__description">Lorem ipsum dolor sit amet, consectetuer adipiscing el...</p>
-                                 <div class="tour-item__footer">
-                                     <span class="tour-item__price">$3600</span>
-                                     <span class="tour-item__rating">
-                                         <i class="fa-solid fa-star"></i>
-                                         $3600
-                                     </span>
-                                     <span class="tour__item-review">good</span>
-                                 </div>
-                             </div>
-                         </div>
+                         
                      </div>
                  </div>
                  <!-- tour pagination -->
@@ -733,8 +631,8 @@
             <!-- end holidays -->
 
             <div class="team grid">
-                <ul class="team-list row">
-                    <li class="team-item col l-3">
+                <ul class="team-list row no-gutters">
+                    <li class="team-item col l-3 m-4 c-12">
                         <div class="team-item__wraper">
                             <img 
                                 src="./assets/img/content-team/team-img1.jpg" 
@@ -743,13 +641,109 @@
                             <div class="team-item__content">
                                 <h3 class="team-item__name">Jack Burton</h3>
                                 <p class="team-item__text">
-                                    Sed ut perspiciatis unde <br> omnis iste natus error <br>sit voluptatem lorem
+                                    Sed ut perspiciatis unde omnis iste <br> 
+                                     natus error sit voluptatem lorem
                                 </p>
                                 <div class="team__item-socials">
-                                    <i class="fab fa-twitter"></i>
-                                    <i class="fab fa-pinterest"></i>
-                                    <i class="fab fa-facebook-f"></i>
-                                    <i class="fab fa-instagram"></i>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-pinterest"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-item col l-3 m-4 c-12">
+                        <div class="team-item__wraper">
+                            <img 
+                                src="./assets/img/content-team/team-img2.jpg" 
+                                alt="team image 1" 
+                                class="team-item__image">
+                            <div class="team-item__content">
+                                <h3 class="team-item__name">Jack Burton</h3>
+                                <p class="team-item__text">
+                                    Sed ut perspiciatis unde omnis iste <br> 
+                                     natus error sit voluptatem lorem
+                                </p>
+                                <div class="team__item-socials">
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-pinterest"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-item col l-3 m-4 c-12">
+                        <div class="team-item__wraper">
+                            <img 
+                                src="./assets/img/content-team/team-img3.jpg" 
+                                alt="team image 1" 
+                                class="team-item__image">
+                            <div class="team-item__content">
+                                <h3 class="team-item__name">Jack Burton</h3>
+                                <p class="team-item__text">
+                                    Sed ut perspiciatis unde omnis iste <br> 
+                                     natus error sit voluptatem lorem
+                                </p>
+                                <div class="team__item-socials">
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-pinterest"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team-item col l-3 m-4 c-12">
+                        <div class="team-item__wraper">
+                            <img 
+                                src="./assets/img/content-team/team-img4.jpg" 
+                                alt="team image 1" 
+                                class="team-item__image">
+                            <div class="team-item__content">
+                                <h3 class="team-item__name">Jack Burton</h3>
+                                <p class="team-item__text">
+                                    Sed ut perspiciatis unde omnis iste <br> 
+                                     natus error sit voluptatem lorem
+                                </p>
+                                <div class="team__item-socials">
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-pinterest"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="team__item-socials-link">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
