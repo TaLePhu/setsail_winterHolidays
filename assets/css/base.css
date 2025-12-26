@@ -21,31 +21,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* grid library */
-.grid {
-    width: 100%;
-    display: block;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -8px;
-    margin-right: -8px;
-}
-
-.col {
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-.col-five {
-    width: 20%;
-}
-
-.col-third {
-    width: 33.3333%;
-}
 
 .dots__pagination {
     text-align: center;
