@@ -942,7 +942,18 @@
         <footer id="footer"></footer>
     </div>
 
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/tour-slider.js"></script>
+    <!-- Core utilities and config -->
+    <script src="./assets/js/core/config.js"></script>
+    <script src="./assets/js/core/dom-helpers.js"></script>
+
+    <!-- Base carousel class (required by all carousel types) -->
+    <script src="./assets/js/modules/shared/carousel-base.js"></script>
+
+    <!-- Component implementations -->
+    <script src="./assets/js/modules/slider/slider.js"></script>
+    <script src="./assets/js/modules/carousel/tour-carousel.js"></script>
+
+    <!-- Application entry point (initializes all components) -->
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>

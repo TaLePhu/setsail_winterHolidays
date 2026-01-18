@@ -688,7 +688,7 @@
 }
 /* end cta feature */
 
-/* start review-section */
+/* start content review */
 .review {
     position: relative;
     min-height: 600px;
@@ -784,7 +784,8 @@
     font-weight: 600;
     margin-top: 15px;
 }
-/* end review-section */
+/* end content review */
+
 
 /* start holiday hightlights */
 .holidays {
