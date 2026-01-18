@@ -45,3 +45,8 @@ html {
 .dot.active {
     background-color: var(--primary-color, #43cdd7); /* Thay bằng màu xanh của bạn */
 }
+
+.dot.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

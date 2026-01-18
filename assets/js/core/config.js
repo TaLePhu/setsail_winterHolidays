@@ -19,6 +19,16 @@ const CONFIG = {
         autoPlay: false
     },
 
+    // Review Carousel configuration
+    REVIEW_CAROUSEL: {
+        duration: 0.3,
+        easing: 'ease',
+        snapThreshold: 0.25,
+        autoPlay: true,
+        autoPlayInterval: 3000,
+        itemsPerView: 3
+    },
+
     // Animation timings
     ANIMATION: {
         fadeOutDuration: 400,

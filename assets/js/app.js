@@ -58,10 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create carousel instance
     const tourCarousel = new TourCarousel(tourCarouselConfig);
 
+    // ====== INITIALIZE REVIEW CAROUSEL ======
+    const reviewCarouselConfig = {
+        // DOM Elements
+        container: DOMHelpers.query('.review__list'),
+        items: DOMHelpers.queryAll('.review__item'),
+        dots: DOMHelpers.queryAll('.review__wrap .dots__pagination .dot'),
+
+        // Configuration
+        duration: CONFIG.REVIEW_CAROUSEL.duration,
+        snapThreshold: CONFIG.REVIEW_CAROUSEL.snapThreshold,
+        autoPlay: CONFIG.REVIEW_CAROUSEL.autoPlay,
+        autoPlayInterval: CONFIG.REVIEW_CAROUSEL.autoPlayInterval,
+        itemsPerView: CONFIG.REVIEW_CAROUSEL.itemsPerView
+    };
+
+    // Create review carousel instance
+    const reviewCarousel = new ReviewCarousel(reviewCarouselConfig);
+
     // Optional: Store instances globally for debugging
     window.appInstances = {
         slider,
-        tourCarousel
+        tourCarousel,
+        reviewCarousel
     };
 
     console.log('✅ Application initialized successfully');

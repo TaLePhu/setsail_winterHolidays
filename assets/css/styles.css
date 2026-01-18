@@ -735,6 +735,19 @@
 
 .review__list {
     user-select: none;
+    display: flex !important;
+    overflow: hidden;
+    position: relative;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+}
+
+.review__item {
+    flex: 0 0 33.33333% !important;
+    min-width: 33.33333%;
+    max-width: 33.33333%;
+    padding: 0 20px !important;
+    transition: transform 0.3s ease;
 }
 
 .review__item-wrap {
