@@ -985,8 +985,272 @@
     font-weight: 600;
 }
 
+
+
 /* end stats */
 
-#footer {
-
+/* start resorts section */
+.resorts {
+    padding: 100px 0;
 }
+
+.resorts__list {
+    margin-top: 60px;
+}
+
+.resort__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.resort__item-link {
+    position: relative;
+    display: block;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.resort__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.resort__item-link:hover .resort__item-img {
+    transform: scale(1.1);
+}
+
+.resort__item-title {
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.2rem;
+    font-family: Satisfy, cursive;
+    color: var(--white-color);
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    z-index: 2;
+}
+
+.resort__item-badge {
+    position: absolute;
+    top: 20px;
+    right: 94px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white-color);
+    z-index: 3;
+}
+
+/* end resorts section */
+
+/* start footer */
+#footer {
+    background-color: #2b2d35;
+    padding-top: 80px;
+}
+
+.footer__outer {
+    padding-bottom: 60px;
+}
+
+.footer__list {
+    list-style: none;
+}
+
+.footer__item {
+    color: #8b8d94;
+}
+
+/* Column 1: Logo & Info */
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__logo-img {
+    width: 150px;
+    height: 48px;
+}
+
+.footer__desc {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #8b8d94;
+}
+
+.footer__contact {
+    list-style: none;
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #8b8d94;
+}
+
+.footer__contact-item i {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-top: 2px;
+}
+
+/* Column 2: Recent Posts */
+.footer__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.footer__posts {
+    list-style: none;
+}
+
+.footer__post-item {
+    margin-bottom: 25px;
+}
+
+.footer__post-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__post-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white-color);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.footer__post-link:hover .footer__post-title {
+    color: var(--primary-color);
+}
+
+.footer__post-date {
+    font-size: 1.3rem;
+    color: #8b8d94;
+    line-height: 1.4;
+}
+
+/* Column 3: Subscribe */
+.footer__subscribe-desc {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #8b8d94;
+    margin-bottom: 25px;
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__form-group {
+    position: relative;
+}
+
+.footer__form-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b8d94;
+    font-size: 1.4rem;
+}
+
+.footer__input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background-color: #3a3c44;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer__input::placeholder {
+    color: #8b8d94;
+}
+
+.footer__input:focus {
+    background-color: #43454d;
+}
+
+.footer__btn-subscribe {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+
+.footer__btn-subscribe:hover {
+    background-color: #4dd6db;
+}
+
+/* Column 4: Instagram */
+.footer__instagram-desc {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #8b8d94;
+}
+
+/* Footer Bottom */
+.footer__bottom {
+    background-color: #25272e;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer__bottom-text {
+    font-size: 1.4rem;
+    color: #8b8d94;
+    line-height: 1.4;
+}
+
+.footer__bottom-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__bottom-link:hover {
+    color: #4dd6db;
+}
+
+/* end footer */
